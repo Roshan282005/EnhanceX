@@ -2,6 +2,8 @@ import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
+import DownloadButton from "./DownloadButton";
+
 import { 
   Clock, 
   Cpu, 
@@ -127,17 +129,18 @@ export const ProcessingStatus: React.FC<ProcessingStatusProps> = ({
 
         {/* Download Button */}
         {downloadUrl && (
-          <div className="pt-4 border-t border-white/10">
-            <a
-              href={downloadUrl}
-              download
-              className="flex items-center justify-center w-full px-6 py-3 bg-gradient-primary text-primary-foreground rounded-lg font-medium hover:shadow-glow hover:scale-105 transition-glow"
+         <div className="pt-4 border-t border-white/10">
+           <a
+             href={downloadUrl}
+             download
+             className="flex items-center justify-center w-full px-6 py-3 bg-gradient-primary text-primary-foreground rounded-lg font-medium hover:shadow-glow hover:scale-105 transition-glow"
             >
               <Download className="mr-2 h-5 w-5" />
-              Download Enhanced Video
-            </a>
-          </div>
+                 Download Enhanced Video
+           </a>
+         </div>
         )}
+
       </div>
     </Card>
   );
